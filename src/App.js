@@ -1,15 +1,9 @@
 import React from "react";
 import { Route, Switch } from "react-router-dom";
-import HomePage from "./pages/homepage.component";
+import HomePage from "./pages/home/homepage.component";
+import ShopPage from "./pages/shop/shop.component";
 
 import "./App.css";
-
-const HatsPage = () => (
-  <div>
-    <h1>HATS PAGE</h1>
-  </div>
-);
-
 class App extends React.Component {
   render() {
     return (
@@ -18,7 +12,7 @@ class App extends React.Component {
       // </div>
       <div>
         <Switch>
-        <Route exact path="/shop/hats" component={HatsPage} />
+        <Route exact path="/shop" component={ShopPage} />
         <Route exact path="/" component={HomePage} />
         </Switch>
       </div>
